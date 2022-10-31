@@ -1,7 +1,7 @@
 <div class="container">
     <p class="font-weight-bold text-center">ALL APPS</p>
     <div class="row mx-n2 mx-sm-n3">
-        {% assign apps = site.products %}
+        {% assign apps = site.products | sort: "sort_order" %}
         {% for app in apps %}
         <div class="col-3 px-2 px-sm-3 mb-3 mb-sm-5">
             <!-- Product -->
@@ -12,10 +12,10 @@
                              alt="Image Description">
                     </div>
 
-                    <div class="card-body pt-4 px-4 pb-0">
+                    <div class="card-body pt-4 pb-2 px-4 pb-0">
                         <div class="mb-2">
                             <h3 class="font-size-1 font-weight-normal">
-                                <span class="text-danger font-weight-bold">Herschel backpack in dark blue</span>
+                                <span class="text-danger font-weight-bold">{{ app.title }}</span>
                             </h3>
                         </div>
                     </div>
