@@ -5,13 +5,14 @@
 </head>
 
 <body>
+{% include header.html %}
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content" role="main">
-    <div class="container space-2">
         <h1 class="font-weight-bold text-center text-uppercase">{{ page.title }}</h1>
         {{ content }}
-    </div>
+        {% include list-apps.html %}
 </main>
+{% include footer_js.html %}
 <!-- ========== END MAIN CONTENT ========== -->
 </body>
 </html>

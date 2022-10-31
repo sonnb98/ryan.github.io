@@ -1,0 +1,14 @@
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.12.3/mode-javascript.js" integrity="sha512-ErfBhCrjgGBFd/99IkMqrTo6tBkshCKgPS9zBy6sz58CCaFTrCLPH1HaObG4NtMkAChadC8IoGbXCEam+9gwRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% if page.key == 'try-code' %}
+<script>
+    var editor = ace.edit("html_input");
+    editor.setTheme("ace/theme/dreamweaver");
+    editor.session.setMode("ace/mode/html");
+
+    document.getElementById("run-code").addEventListener("click", function (){
+        document.getElementById("html_result").innerHTML = editor.getValue();
+    });
+</script>
+{% endif %}

@@ -1,14 +1,18 @@
 ---
 layout: product
 title: Try code
-meta-title: "Try code"
-meta-description: "Try code"
-meta-keywords: "ryan"
+key: "try-code"
 permalink: "/trycode/"
 author: Ryan
 sort_order: 1
 ---
 
-<p>Try code</p>
-
-{% include list-apps.html %}
+<div class="container-fluid p-2 bg-soft-secondary mb-5" id="try_code">
+    <a href="#" class="btn btn-sm btn-primary cursor-pointer run-code offset-6" id="run-code">Run</a>
+    <div class="row space-1">
+        <pre class="col-6" id="html_input">Ryan</pre>
+        <div class="col-6">
+            <div class="col-11 p-2 overflow-auto card border-0 ml-5" id="html_result"></div>
+        </div>
+    </div>
+</div>
