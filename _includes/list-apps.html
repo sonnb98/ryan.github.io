@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row mx-n2 mx-sm-n3">
+        {% assign apps = site.products %}
+        {% for app in apps %}
+        <div class="col-3 px-2 px-sm-3 mb-3 mb-sm-5">
+            <!-- Product -->
+            <a href="{{ site.url }}{{ app.permalink }}">
+                <div class="card text-center h-100">
+                    <div class="position-relative">
+                        <img class="card-img-top rounded" src="{{ site.url }}/assets/img/app.png"
+                             alt="Image Description">
+                    </div>
+
+                    <div class="card-body pt-4 px-4 pb-0">
+                        <div class="mb-2">
+                            <h3 class="font-size-1 font-weight-normal">
+                                <span class="text-danger font-weight-bold">Herschel backpack in dark blue</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product -->
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
