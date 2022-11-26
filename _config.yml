@@ -35,5 +35,5 @@ plugins:
   - jekyll-feed
 
 collections:
-  products:
+  applications:
     output: true
